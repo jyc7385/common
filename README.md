@@ -47,6 +47,5 @@
   <summary>내용 확인<summary>
   
     내용 
-  
 </details>
 
