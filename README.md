@@ -43,9 +43,9 @@
 
 * 2022.02.03 ~ 2022.03.20
 
-<details>
-  <summary>내용 확인<summary>
-  
-    내용 
+<details><summary>내용 확인<summary>
+  <p>
+    내용
+  </p>
 </details>
 
