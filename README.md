@@ -10,6 +10,15 @@
 디지털 시대에 화이트보드로 수기 예약을? <br>
 이런 문화 한 번 바꿔보자!!
 
+## 기술 스택
+
+- front : HTML, CSS, Javascript, jQuery
+- back : Java(1.8), Spring framework(5.0.7), Oracle(11.2.0.1.0), MyBatis(3.4.6), Tomcat(8.5)
+
+## 개발 기간
+
+- 2022.02.03 ~ 2022.03.20
+
 ## 주요 기능
 
 - 공용
@@ -34,24 +43,17 @@
   - 예약 조회 / 신청 : 선택한 날짜에 대해 예약이 가능한지의 여부를 알 수 있으며, 예약을 신청할 수 있음
   - 개인 예약 조회 : 개인이 신청한 모든 예약 조회
   - 개인 예약 취소 : 오늘 이후의 날짜에 대해선 예약을 취소할 수 있음
-  
-## 기술 스택
 
-- front : HTML, CSS, Javascript, jQuery
-- back : Java(1.8), Spring framework(5.0.7), Oracle(11.2.0.1.0), MyBatis(3.4.6), Tomcat(8.5)
+## DB 설계
 
-## 개발 기간
+![image](https://user-images.githubusercontent.com/48465072/159699931-7d1fdbc4-9c85-435c-bcb1-f0f1044a49ce.png)
 
-- 2022.02.03 ~ 2022.03.20
+## 실행 화면
 
-<details><summary>CLICK ME</summary>
-<p>
+<details><summary>회원 관련</summary>
 
 안녕하세요!
 반가워요!
-![image](https://user-images.githubusercontent.com/48465072/159699489-038181a7-eb03-4bdb-b263-2713d72ccb43.png)
-
   
-</p>
 </details>
 
