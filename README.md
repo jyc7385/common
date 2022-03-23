@@ -47,7 +47,6 @@
 
 ## DB 설계
 
-![image](https://user-images.githubusercontent.com/48465072/159700333-79fbc8f9-23cc-44ec-93a3-eee6d19e7d08.png)
 
 ## 실행 화면
 
