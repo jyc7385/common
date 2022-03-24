@@ -95,9 +95,15 @@
   <br>예약 페이지입니다. 위에서 날짜를 선택하고 검색 버튼을 누르면 아래 표에 예약 현황이 나옵니다.
   <br>예약이 가능하면 예약 가능이라는 버튼이 활성화되며, 누군가가 예약한 상태면 예약 불가능이라고 표시됩니다.
   
-  ![image](https://user-images.githubusercontent.com/48465072/159979539-19cb0e72-4413-49b1-815b-365815b9967b.png)
+  ![image](https://user-images.githubusercontent.com/48465072/159981969-3b9eac65-74e4-4eef-9999-3f0aa758d6ce.png)
   <br>빨간 박스로 표시한 곳에 예약했습니다. 예약 주기에 의해 이제 당일 예약은 불가능합니다.
   <br>그래서 같은 날 예약 가능 버튼을 누르면 예약할 수 없다는 것을 알립니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159980971-9f509375-9977-422b-867b-a9fb2fc1d17d.png)
+  <br>개인 예약 목록 페이지입니다. 예약 번호를 클릭하면 해당 예약 상세 조회 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159981144-8a092bfe-6a43-4694-8a9e-eed6233de4aa.png)
+  <br>예약 상세조회 페이지입니다. 모든 내용은 수정할 수 없습니다.
   
 <details>
 
