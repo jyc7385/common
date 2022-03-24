@@ -76,7 +76,7 @@
   
 </details>
 
-<details><summary>일반 사용자 관련 페이지</summary>
+<details><summary>일반 사용자 전용 페이지</summary>
 
   <br>
   
@@ -107,7 +107,7 @@
   
 </details>
 
-<details><summary>시설 관리자 관련 페이지</summary>
+<details><summary>시설 관리자 전용 페이지</summary>
 
   <br>
   
