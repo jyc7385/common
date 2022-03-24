@@ -105,7 +105,7 @@
   ![image](https://user-images.githubusercontent.com/48465072/159981144-8a092bfe-6a43-4694-8a9e-eed6233de4aa.png)
   <br>예약 상세조회 페이지입니다. 모든 내용은 수정할 수 없습니다.
   
-<details>
+</details>
 
 <details><summary>시설 관리자 관련 페이지</summary>
 
@@ -125,10 +125,24 @@
   ![image](https://user-images.githubusercontent.com/48465072/159985779-8000d906-d6f3-4c82-a6d4-4e357e9396a6.png)
   <br>시설 조회/변경/삭제 페이지입니다. 유효성 검증만 통과한다면 변경할 수 있고, 시설 등록을 삭제할 수도 있습니다.
   
+  ![image](https://user-images.githubusercontent.com/48465072/159992651-7e40bed5-5d0c-4f5b-a7d8-603d85879c5b.png)
+  <br>예약자 정보 조회 페이지입니다. 편의성을 위해 새 창에서 해당 내용을 보여줍니다.
+  
   ![image](https://user-images.githubusercontent.com/48465072/159987953-94995b79-f2ce-4960-8293-7e6b013acbca.png)
   <br>예약 상세조회 페이지입니다. 예약 삭제도 가능하며, 예약자가 있다면 예약 취소도 가능합니다.
   
-  ![image](https://user-images.githubusercontent.com/48465072/159988186-d4b07e94-6201-4116-9188-8ffe311dae51.png)
-  <br>
+  ![image](https://user-images.githubusercontent.com/48465072/159988669-5b722d9b-8cd7-4f19-932c-71ad051fbb91.png)
+  <br>예약 추가 페이지입니다. 입력이 가능한 곳에 잘못된 입력이 있으면 메시지로 알려줍니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159990224-0fb51812-111d-43ac-a999-cfe9e8a886cb.png)
+  <br>또한 정확한 주기를 적용하기 위해 빨간 박스로 표시한 2개의 분 단위가 나누었을 때 나머지가 없도록 입력을 검증합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159991102-a5027116-7cb9-486b-80f8-1c4c0b2b0342.png)
+  <br>해당 시설은 시작 일자와 마지막 일자 사이에 예약이 이미 존재합니다.
+  <br>예약이 겹치는 경우를 막기위해, 이런 경우를 통과시키지 않고 알립니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159992064-63583f79-9280-4427-9868-b0f642585db7.png)
+  <br>추가 버튼을 클릭하면 하단 표에 예약 대기 현황을 표시합니다.
+  <br>체크박스를 선택하고 삭제하면 해당 날짜를 예약 대기 현황에서 삭제할 수 있습니다.
   
 </details>
