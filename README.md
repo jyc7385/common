@@ -51,7 +51,7 @@
   
 ## 실행 화면
 
-<details><summary>회원 관련 페이지</summary>
+<details><summary>공용 페이지 : 로그인 / 회원가입</summary>
 
   <br>
   
