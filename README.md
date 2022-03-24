@@ -51,7 +51,7 @@
   
 ## 실행 화면
 
-<details><summary>회원 관련</summary>
+<details><summary>회원 관련 페이지</summary>
 
   <br>
   
@@ -76,7 +76,7 @@
   
 </details>
 
-<details><summary>일반 사용자 관련</summary>
+<details><summary>일반 사용자 관련 페이지</summary>
 
   <br>
   
@@ -107,3 +107,28 @@
   
 <details>
 
+<details><summary>시설 관리자 관련 페이지</summary>
+
+  <br>
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159983394-8e55990b-8a55-4704-bacf-7f469241910a.png)
+  <br>시설 관리자로 로그인하면 나오는 관리자 등록 시설 목록 페이지입니다. Paging 기능이 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159984379-ffd192ca-20ff-4412-9f61-0d01b70901f5.png)
+  <br>검색 기능도 적용되어 있습니다. 계정 버튼을 누르면 로그아웃을 할 수 있는 페이지로,
+  <br>시설 등록 버튼을 누르면 시설을 등록하는 페이지로,
+  <br>시설 명을 누르면 해당 시설 조회/변경/삭제 페이지로, 예약 관리 밑에 >>> 버튼을 누르면 예약 조회 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159985235-b2419867-5fbd-4bed-b0ee-49c458c02619.png)
+  <br>시설 등록 페이지입니다. 여기 페이지를 포함해 입력이 가능한 모든 곳에는 유효성 검증이 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159985779-8000d906-d6f3-4c82-a6d4-4e357e9396a6.png)
+  <br>시설 조회/변경/삭제 페이지입니다. 유효성 검증만 통과한다면 변경할 수 있고, 시설 등록을 삭제할 수도 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159987953-94995b79-f2ce-4960-8293-7e6b013acbca.png)
+  <br>예약 상세조회 페이지입니다. 예약 삭제도 가능하며, 예약자가 있다면 예약 취소도 가능합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159988186-d4b07e94-6201-4116-9188-8ffe311dae51.png)
+  <br>
+  
+</details>
