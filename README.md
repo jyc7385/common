@@ -53,8 +53,45 @@
 
 <details><summary>회원 관련</summary>
 
-안녕하세요!
-반가워요!
+  <br>
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159946827-a8be884b-aea1-4631-b20b-b5b4d0553a19.png)
+  <br>로그인 화면입니다. 아래에 회원가입 버튼을 누르면 회원가입 유형 선택 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159947292-bdbfe27b-6605-4388-86fb-183c39307a2d.png)
+  <br>회원가입 유형을 선택하면 해당 유형의 회원가입 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159948671-38bf83de-4914-4b80-af5f-25cacf704716.png)
+  <br>일반 사용자 회원가입 페이지입니다. 각 항목에 입력이 없으면 입력하라는 메시지를 표시합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159949440-fe7c87a3-b455-43a2-90c0-6aa2332ab0cd.png)
+  <br>각 항목에 유효성 검증 테스트를 통과하지 못하면 제대로 입력하라는 메시지를 표시합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159951470-a41b5ff0-4116-43f3-9c13-262bce8f5ddf.png)
+  <br>시설 관리자 회원가입 페이지입니다. 일반 사용자 회원가입 페이지에 닉네임 항목이 추가되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159956668-0d55f86d-e2a8-4f4a-bdf7-e11ff45ec775.png)
+  <br>다시 로그인 페이지입니다. 항목에 입력이 없으면 입력하라는 메시지를 표시합니다.
+  <br>ID나 비밀번호가 틀린 경우도 해당 내용을 알림 창으로 알려줍니다.
   
 </details>
+
+<details><summary>일반 사용자 관련</summary>
+
+  <br>
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159961697-76c812f5-2068-44c5-bdef-cd22e0a66f9f.png)
+  <br>일반 사용자가 로그인 하면 나오는 시설 목록 페이지입니다. Paging 기능이 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159962254-89ac6dc1-f291-4ea5-8164-99ea0aafc259.png)
+  <br>키워드 검색 기능도 적용되어 있습니다.
+  <br>시설 명을 클릭하면 시설에 대한 내용을 조회하는 페이지로 이동하며,
+  <br>예약에 해당하는 >>>을 클릭혀면 예약하는 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159962772-3fa9f2ff-98a8-4f4e-980d-e1b5d4c99de4.png)
+  <br>시설에 대한 내용을 조회하는 페이지입니다. 모든 항목은 수정할 수 없습니다.
+  
+  
+  
+<details>
 
