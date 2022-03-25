@@ -127,6 +127,10 @@
   ![image](https://user-images.githubusercontent.com/48465072/159985779-8000d906-d6f3-4c82-a6d4-4e357e9396a6.png)
   <br>시설 조회/변경/삭제 페이지입니다. 유효성 검증만 통과한다면 변경할 수 있고, 시설 등록을 삭제할 수도 있습니다.
   
+  ![image](https://user-images.githubusercontent.com/48465072/160064059-382040ae-5bef-49cc-9e76-62291b27ec89.png)
+  <br>예약 조회 페이지입니다. 날짜를 선택하고 검색 버튼을 누르면 하단 표에 예약 현황을 보여줍니다.
+  <br>예약 번호를 클릭하면 예약 상세조회 페이지로, 예약자 ID를 클릭하면 예약자 정보 조회 페이지로 이동합니다.
+  
   ![image](https://user-images.githubusercontent.com/48465072/159992651-7e40bed5-5d0c-4f5b-a7d8-603d85879c5b.png)
   <br>예약자 정보 조회 페이지입니다. 편의성을 위해 새 창에서 해당 내용을 보여줍니다.
   
