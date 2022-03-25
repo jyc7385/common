@@ -131,11 +131,11 @@
   <br>예약 조회 페이지입니다. 날짜를 선택하고 검색 버튼을 누르면 하단 표에 예약 현황을 보여줍니다.
   <br>예약 번호를 클릭하면 예약 상세조회 페이지로, 예약자 ID를 클릭하면 예약자 정보 조회 페이지로 이동합니다.
   
-  ![image](https://user-images.githubusercontent.com/48465072/159992651-7e40bed5-5d0c-4f5b-a7d8-603d85879c5b.png)
-  <br>예약자 정보 조회 페이지입니다. 편의성을 위해 새 창에서 해당 내용을 보여줍니다.
-  
   ![image](https://user-images.githubusercontent.com/48465072/159987953-94995b79-f2ce-4960-8293-7e6b013acbca.png)
   <br>예약 상세조회 페이지입니다. 예약 삭제도 가능하며, 예약자가 있다면 예약 취소도 가능합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159992651-7e40bed5-5d0c-4f5b-a7d8-603d85879c5b.png)
+  <br>예약자 정보 조회 페이지입니다. 편의성을 위해 새 창에서 해당 내용을 보여줍니다.
   
   ![image](https://user-images.githubusercontent.com/48465072/159988669-5b722d9b-8cd7-4f19-932c-71ad051fbb91.png)
   <br>예약 추가 페이지입니다. 입력이 가능한 곳에 잘못된 입력이 있으면 메시지로 알려줍니다.
