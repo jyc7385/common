@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jyc.common.mapper.ReservationMapper">
+
+	<resultMap type="jyc.common.domain.ReservationVO" id="reservationMap">
+		<id property="rid" column="rid" />
+		<result property="rid" column="rid" />
+		<result property="mid" column="mid" />
+		<result property="pid" column="pid" />
+		<result property="pname" column="pname" />
+		<result property="team" column="team" />
+		<result property="userId" column="userid" />
+		<result property="regDateTime" column="regdatetime" />
+		<result property="resDate" column="resdate" />
+		<result property="startHour" column="starthour" />
+		<result property="startMinute" column="startminute" />
+		<result property="finishHour" column="finishhour" />
+		<result property="finishMinute" column="finishminute" />
+	</resultMap>
+		
+	<insert id="registerReservation" parameterType="java.util.HashMap">
+		INSERT
+		INTO res_info_tbl (rid, mid, pid, pname, team, userid, regdatetime, resdate, starthour, startminute, finishhour, finishminute)				
+		SELECT res_seq.nextval, A.*
+		FROM (
+			<foreach collection="resList" item="item" separator="UNION ALL ">
+				SELECT
+					#{mid} AS mid,
+					#{pid} AS pid,
+					#{pname} AS pname,
+					#{item.team} AS team,
+					#{userId} AS userid,
+					#{regDateTime} AS regdatetime,
+					#{item.resDate} AS resdate,
+					#{item.startHour} AS starthour,
+					#{item.startMinute} AS startminute,
+					#{item.finishHour} AS finishhour,
+					#{item.finishMinute} AS finishminute
+				FROM DUAL
+			</foreach>
+		) A
+	</insert>
+	
+	<select id="readManagerRes" resultType="jyc.common.domain.ReservationVO" parameterType="map">
+		SELECT *
+		FROM res_info_tbl
+		WHERE mid = #{mid} AND pid = #{pid} AND resdate = #{resDate}
+	</select>
+	
+	<select id="readUserRes" resultType="jyc.common.domain.ReservationVO" parameterType="map">
+		SELECT *
+		FROM res_info_tbl
+		WHERE pid = #{pid} AND resdate = #{resDate}
+	</select>
+	
+	<update id="userApplyRes">
+		UPDATE res_info_tbl
+		SET
+			userid = #{userId},
+			regdatetime = #{regDateTime}
+		WHERE rid = #{rid}
+	</update>
+	
+	<select id="userResList" resultType="jyc.common.domain.ReservationVO" parameterType="map">
+		SELECT *
+		FROM res_info_tbl
+		WHERE userid = #{userId}
+	</select>
+	
+	<select id="userGetRes" resultType="jyc.common.domain.ReservationVO" parameterType="map">
+		SELECT *
+		FROM res_info_tbl
+		WHERE userid = #{userId} AND rid = #{rid}
+	</select>
+	
+	<update id="userCancelRes">
+		UPDATE res_info_tbl
+		SET
+			userid = #{userId},
+			regdatetime = #{regDateTime}
+		WHERE rid = #{rid}
+	</update>
+	
+	<select id="managerGetRes" resultType="jyc.common.domain.ReservationVO" parameterType="map">
+		SELECT *
+		FROM res_info_tbl
+		WHERE rid = #{rid} AND mid = #{mid}
+	</select>
+	
+	<update id="managerCancelRes">
+		UPDATE res_info_tbl
+		SET
+			userid = #{userId},
+			regdatetime = #{regDateTime}
+		WHERE rid = #{rid} AND mid = #{mid}
+	</update>
+	
+	<delete id="managerRemoveRes" parameterType="map">
+		DELETE
+		FROM res_info_tbl
+		WHERE rid = #{rid} AND mid = #{mid}
+	</delete>
+	
+	<select id="userCheckRes" resultType="int">
+		SELECT COUNT(*)
+		FROM res_info_tbl
+		WHERE
+			resdate >= #{startDate} AND
+			#{finishDate} >= resdate AND
+			userid = #{userId} AND
+			pid = #{pid} 
+	</select>
+	
+	<select id="managerCheckRes" resultType="int">
+		SELECT COUNT(*)
+		FROM res_info_tbl
+		WHERE
+			resdate >= #{startDate} AND
+			#{finishDate} >= resdate AND
+			pid = #{pid} 
+	</select>
+	
+</mapper>

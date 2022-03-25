@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jyc.common.mapper.PlaceMapper">
+
+	<resultMap type="jyc.common.domain.PlaceVO" id="placeMap">
+		<id property="pid" column="pid" />
+		<result property="pid" column="pid" />
+		<result property="name" column="name" />
+		<result property="nickName" column="nickname" />
+		<result property="mid" column="mid" />
+		<result property="reRegCycle" column="reregcycle" />
+		<result property="regCycleHour" column="regcyclehour" />
+		<result property="regCycleMinute" column="regcycleminute" />
+		<result property="team" column="team" />
+		<result property="address" column="address" />
+		<result property="notice" column="notice" />
+	</resultMap>
+		
+	<insert id="registerPlace">
+		INSERT
+		INTO place_info_tbl (pid, name, nickname, mid, reregcycle, regcyclehour, regcycleminute, team, address, notice)
+		VALUES (PLACE_SEQ.NEXTVAL, #{name}, #{nickName}, #{mid}, #{reRegCycle}, #{regCycleHour}, #{regCycleMinute}, #{team}, #{address}, #{notice})
+	</insert>
+
+	<select id="checkPlaceName" resultType="int">
+		SELECT COUNT(*)
+		FROM place_info_tbl
+		WHERE name = #{name}
+	</select>
+	
+	<select id="getListWithPaging" resultType="jyc.common.domain.PlaceVO" parameterType="map">
+	
+		<![CDATA[
+			
+			SELECT pid, name, nickname, mid, reregcycle, regcyclehour, regcycleminute, team, address, notice
+			FROM (
+			
+				SELECT rownum AS rn, pid, name, nickname, mid, reregcycle, regcyclehour, regcycleminute, team, address, notice
+				FROM (					
+					
+					SELECT *
+					FROM place_info_tbl
+					WHERE mid = #{mid}
+					ORDER BY pid ASC
+									
+				)
+				
+		]]>
+				
+					<trim prefix="WHERE (" suffix=") " prefixOverrides="OR">
+						<foreach item='type' collection="cri.typeArr">
+							<choose>
+								<when test="type == 'T'.toString()">
+									name like '%'||#{cri.keyword}||'%'
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+					
+		<![CDATA[	
+		
+			)
+			
+			WHERE rn BETWEEN ((#{cri.pageNum} - 1) * #{cri.amount} + 1) AND (#{cri.pageNum} * #{cri.amount})
+		
+		]]>
+		
+	</select>
+	
+	<select id="getTotalCount" resultType="int" parameterType="map">
+		SELECT count(*)
+		FROM place_info_tbl
+		WHERE
+		<trim prefix="(" suffix=") AND" prefixOverrides="OR">
+			<foreach item='type' collection="cri.typeArr">
+				<choose>
+					<when test="type == 'T'.toString()">
+						name like '%'||#{cri.keyword}||'%'
+					</when>
+				</choose>
+			</foreach>
+		</trim>
+			mid = #{mid}
+	</select>
+	
+	<select id="read" resultType="jyc.common.domain.PlaceVO" parameterType="map">
+		select * from place_info_tbl where mid = #{mid} and pid = #{pid}
+	</select>
+	
+	<update id="update">
+		UPDATE place_info_tbl
+		SET
+			name = #{name},
+			reregcycle = #{reRegCycle},
+			regcyclehour = #{regCycleHour},
+			regcycleminute = #{regCycleMinute},
+			team = #{team},
+			address = #{address},
+			notice = #{notice}
+		WHERE mid = #{mid} AND pid = #{pid}
+	</update>
+	
+	<delete id="delete" parameterType="map">
+		DELETE
+		FROM place_info_tbl
+		WHERE mid = #{mid} AND pid = #{pid}
+	</delete>
+	
+	
+	<select id="getListWithPaging2" resultType="jyc.common.domain.PlaceVO" parameterType="map">
+	
+		<![CDATA[
+			
+			SELECT pid, name, nickname, mid, reregcycle, regcyclehour, regcycleminute, team, address, notice
+			FROM (
+			
+				SELECT rownum AS rn, pid, name, nickname, mid, reregcycle, regcyclehour, regcycleminute, team, address, notice
+				FROM (					
+					
+					SELECT *
+					FROM place_info_tbl
+					ORDER BY name
+									
+				)
+				
+		]]>
+				
+					<trim prefix="WHERE (" suffix=") " prefixOverrides="OR">
+						<foreach item='type' collection="cri.typeArr">
+							<choose>
+								<when test="type == 'T'.toString()">
+									name like '%'||#{cri.keyword}||'%'
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+					
+		<![CDATA[	
+		
+			)
+			
+			WHERE rn BETWEEN ((#{cri.pageNum} - 1) * #{cri.amount} + 1) AND (#{cri.pageNum} * #{cri.amount})
+		
+		]]>
+		
+	</select>
+	
+	<select id="getTotalCount2" resultType="int" parameterType="map">
+		SELECT count(*)
+		FROM place_info_tbl
+		<trim prefix="WHERE (" suffix=")" prefixOverrides="OR">
+			<foreach item='type' collection="cri.typeArr">
+				<choose>
+					<when test="type == 'T'.toString()">
+						name like '%'||#{cri.keyword}||'%'
+					</when>
+				</choose>
+			</foreach>
+		</trim>
+	</select>
+	
+	<select id="read2" resultType="jyc.common.domain.PlaceVO" parameterType="map">
+		SELECT *
+		FROM place_info_tbl
+		WHERE pid = #{pid}
+	</select>
+	
+</mapper>

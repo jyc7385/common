@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jyc.common.mapper.MemberMapper">
+
+	<resultMap type="jyc.common.domain.MemberVO" id="memberMap">
+		<id property="id" column="id" />
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+		<result property="name" column="name" />
+		<result property="nickName" column="nickname" />
+		<result property="birthDate" column="birthdate" />
+		<result property="gender" column="gender" />
+		<result property="phoneNumber" column="phonenumber" />
+		<result property="address" column="address" />
+		<result property="email" column="email" />
+		<collection property="authList" resultMap="authMap" />
+	</resultMap>
+	
+	<resultMap type="jyc.common.domain.AuthVO" id="authMap">
+		<result property="id" column="id" />
+		<result property="auth" column="auth" />
+	</resultMap>
+	
+	<select id="read" resultMap="memberMap">
+		SELECT mem.id, pw, name, nickname, birthdate, gender, phonenumber, address, email, auth
+		FROM user_info_tbl mem LEFT OUTER JOIN user_auth_tbl auth on mem.id = auth.id
+		WHERE mem.id = #{id}
+	</select>
+	
+	<insert id="joinMember">
+		INSERT
+		INTO user_info_tbl (id, pw, name, nickname, birthdate, gender, phonenumber, address, email)
+		VALUES (#{id}, #{pw}, #{name}, #{nickName}, #{birthDate}, #{gender}, #{phoneNumber}, #{address}, #{email})
+	</insert>
+	
+	<insert id="joinAuth">
+		INSERT
+		INTO user_auth_tbl (id, auth)
+		VALUES (#{id}, #{auth})
+	</insert>
+	
+	<select id="idCheck" resultType="int">
+		SELECT COUNT(*)
+		FROM user_info_tbl
+		WHERE id = #{memberId}
+	</select>
+	
+	<select id="managerGetUserInfo" resultType="jyc.common.domain.MemberVO" parameterType="map">
+		SELECT *
+		FROM user_info_tbl
+		WHERE id = #{id}
+	</select>
+		
+</mapper>
