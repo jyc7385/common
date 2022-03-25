@@ -88,7 +88,7 @@
   ![image](https://user-images.githubusercontent.com/48465072/159962254-89ac6dc1-f291-4ea5-8164-99ea0aafc259.png)
   <br>키워드 검색 기능도 적용되어 있습니다.
   <br>시설 명을 클릭하면 시설에 대한 내용을 조회하는 페이지로 이동하며,
-  <br>예약에 해당하는 >>>을 클릭혀면 예약하는 페이지로 이동합니다.
+  <br>예약에 해당하는 >>>을 클릭하면 예약하는 페이지로 이동합니다.
   
   ![image](https://user-images.githubusercontent.com/48465072/159962772-3fa9f2ff-98a8-4f4e-980d-e1b5d4c99de4.png)
   <br>시설에 대한 내용을 조회하는 페이지입니다. 모든 항목은 수정할 수 없습니다.
