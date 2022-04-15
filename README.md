@@ -19,7 +19,13 @@
 - front : HTML, CSS, Javascript, jQuery, Ajax
 - back : Java(1.8), Spring framework(5.0.7), Oracle(11.2.0.1.0), MyBatis(3.4.6), Tomcat(8.5)
 
-## 주요 기능
+## 핵심 기능
+
+- 같은 시간대에 여러 사용자가 예약할 수 있는 '팀' 개념을 도입하여 다양한 시설 환경에 대비했습니다.
+- 한 사용자가 예약을 독점하는 상황을 방지했습니다.
+- 관리자의 예약 등록이 겹치는 경우를 방지했습니다.
+
+## 세부 기능
 
 - 전체적인 스타일은 Bootstrap SB Admin 2 테마 적용
 
